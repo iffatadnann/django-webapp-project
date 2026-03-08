@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - ABC School{% endblock %}
+
+{% block content %}
+<!-- Dashboard Header -->
+<div class="page-header bg-primary text-white py-5">
+    <div class="container">
+        <h1 class="display-4">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+        </h1>
+        <p class="lead">Welcome back, {{ user.username }}!</p>
+    </div>
+</div>
+
+<!-- User Info Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <i class="fas fa-user-circle"></i> Profile Information
+                        </h3>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong>Username:</strong> {{ user.username }}</p>
+                                <p><strong>Email:</strong> {{ user.email }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong>Account Type:</strong> Student</p>
+                                <p><strong>Status:</strong> <span class="badge bg-success">Active</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm text-center">
+                    <div class="card-body">
+                        <i class="fas fa-user-circle fa-5x text-primary mb-3"></i>
+                        <h5 class="card-title">{{ user.username }}</h5>
+                        <p class="text-muted">Student Account</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Links Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Quick Access</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <a href="{% url 'students' %}" class="text-decoration-none">
+                    <div class="card h-100 text-center p-4 shadow-sm hover-card">
+                        <div class="card-body">
+                            <i class="fas fa-user-graduate fa-4x text-primary mb-3"></i>
+                            <h5 class="card-title">Students</h5>
+                            <p class="card-text">View all students</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4">
+                <a href="{% url 'courses' %}" class="text-decoration-none">
+                    <div class="card h-100 text-center p-4 shadow-sm hover-card">
+                        <div class="card-body">
+                            <i class="fas fa-book-open fa-4x text-success mb-3"></i>
+                            <h5 class="card-title">Courses</h5>
+                            <p class="card-text">Browse all courses</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4">
+                <a href="{% url 'staff' %}" class="text-decoration-none">
+                    <div class="card h-100 text-center p-4 shadow-sm hover-card">
+                        <div class="card-body">
+                            <i class="fas fa-chalkboard-teacher fa-4x text-warning mb-3"></i>
+                            <h5 class="card-title">Staff</h5>
+                            <p class="card-text">Meet our faculty</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Activity Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Recent Activity</h2>
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <i class="fas fa-check-circle text-success"></i>
+                        Successfully logged in - <small class="text-muted">Just now</small>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-user text-primary"></i>
+                        Account created - <small class="text-muted">Today</small>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-book text-info"></i>
+                        Enrolled in Computer Science - <small class="text-muted">2 days ago</small>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
