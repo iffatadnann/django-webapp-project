@@ -114,6 +114,26 @@ http://127.0.0.1:8000/admin/
 
 ---
 
+## Screenshots
+
+### Login Page
+
+![Login Page](screenshots/login.jpeg)
+
+### Student Dashboard
+
+![Dashboard](screenshots/dashboard.jpeg)
+
+### Courses Page
+
+![Courses](screenshots/courses.jpeg)
+
+### Admin Panel
+
+![Admin](screenshots/admin.jpeg)
+
+---
+
 ## Future Improvements
 
 - Course enrollment system
